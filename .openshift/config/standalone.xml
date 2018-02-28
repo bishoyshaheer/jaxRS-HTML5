@@ -89,14 +89,14 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:datasources:1.0">
             <datasources>
-                <datasource jndi-name="java:jboss/datasources/ExampleDS" enabled="false" use-java-context="true" pool-name="H2DS">
-                    <connection-url>jdbc:h2:${jboss.server.data.dir}/test;DB_CLOSE_DELAY=-1</connection-url>
-                    <driver>h2</driver>
-                    <security>
-                        <user-name>sa</user-name>
-                        <password>sa</password>
-                    </security>
-                </datasource>
+                <!--<datasource jndi-name="java:jboss/datasources/ExampleDS" enabled="false" use-java-context="true" pool-name="H2DS">-->
+                    <!--<connection-url>jdbc:h2:${jboss.server.data.dir}/test;DB_CLOSE_DELAY=-1</connection-url>-->
+                    <!--<driver>h2</driver>-->
+                    <!--<security>-->
+                        <!--<user-name>sa</user-name>-->
+                        <!--<password>sa</password>-->
+                    <!--</security>-->
+                <!--</datasource>-->
                 <datasource jndi-name="java:jboss/datasources/MysqlDS" enabled="${mysql.enabled}" use-java-context="true" pool-name="MysqlDS">
                     <connection-url>jdbc:mysql://${env.OPENSHIFT_MYSQLDB_HOST}:${env.OPENSHIFT_MYSQLDB_PORT}/${env.OPENSHIFT_APP_NAME}</connection-url>
                     <driver>mysql</driver>
@@ -114,9 +114,9 @@
                     </security>
                 </datasource>
                 <drivers>
-                    <driver name="h2" module="com.h2database.h2">
-                        <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
-                    </driver>
+                    <!--<driver name="h2" module="com.h2database.h2">-->
+                        <!--<xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>-->
+                    <!--</driver>-->
                     <driver name="mysql" module="com.mysql.jdbc">
                         <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class>
                     </driver>
